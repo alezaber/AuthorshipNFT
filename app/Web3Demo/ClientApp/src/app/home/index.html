@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stepper</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- STEP 1 -->
+  <div class="frame">
+    <div class="frame__header">
+      <ul class="frame__steps steps">
+        <li class="steps__item current">
+          <div class="steps__item-title">Set URL</div>
+        </li>
+        <li class="steps__item">
+          <div class="steps__item-title">Generate NFT</div>
+        </li>
+        <li class="steps__item">
+          <div class="steps__item-title">Finish</div>
+        </li>
+      </ul>
+    </div>
+    <div class="frame__body">
+      <form class="form">
+        <input class="form__input" type="text" placeholder="Set post URL">
+        <button class="form__btn" type="submit">Generate NFT</button>
+      </form>
+    </div>
+  </div>
+  <!-- STEP 2 -->
+  <div class="frame">
+    <div class="frame__header">
+      <ul class="frame__steps steps">
+        <li class="steps__item completed">
+          <div class="steps__item-title">Set URL</div>
+        </li>
+        <li class="steps__item current">
+          <div class="steps__item-title">Generate NFT</div>
+        </li>
+        <li class="steps__item">
+          <div class="steps__item-title">Finish</div>
+        </li>
+      </ul>
+    </div>
+    <div class="frame__body">
+      <div class="processing">
+        <div class="processing__title">NFT generation in process</div>
+        <img class="processing__img" src="loader.gif" alt="loader" width="100" height="100">
+      </div>
+    </div>
+  </div>
+  <!-- STEP 3 -->
+  <div class="frame">
+    <div class="frame__header">
+      <ul class="frame__steps steps">
+        <li class="steps__item completed">
+          <div class="steps__item-title">Set URL</div>
+        </li>
+        <li class="steps__item completed">
+          <div class="steps__item-title">Generate NFT</div>
+        </li>
+        <li class="steps__item current">
+          <div class="steps__item-title">Finish</div>
+        </li>
+      </ul>
+    </div>
+    <div class="frame__body">
+      <div class="success">
+        <div class="success__title">Congratulation!</div>
+          <p class="success__text">Your ref to blockchain explore</p>
+          <p class="success__text">NFT_ID</p>
+        </div>
+    </div>
+  </div>
+</body>
+</html>

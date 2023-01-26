@@ -1,0 +1,39 @@
+<div class="frame">
+  <div class="frame__header">
+    <ul class="frame__steps steps">
+      <li class="steps__item" [ngClass]="{'current': step==0, 'completed': step>0}">
+        <div class="steps__item-title" >Set URL</div>
+      </li>
+      <li class="steps__item" [ngClass]="{'current': step==1, 'completed': step>1}">
+        <div class="steps__item-title" >Generate NFT</div>
+      </li>
+      <li class="steps__item" [ngClass]="{'current': step==2, 'completed': step>2}">
+        <div class="steps__item-title" >Finish</div>
+      </li>
+    </ul>
+  </div>
+  <div class="frame__body" *ngIf="step==0">
+    <form #f="ngForm"   class="form" (ngSubmit)="processFileByUrl()"> 
+      <input class="form__input form-control" type="url"  name="PostUrl" required [(ngModel)]="model.PostUrl" placeholder="Set post URL">
+      <input class="form__input form-control" type="text" name="Token" required [(ngModel)]="model.Token" placeholder="JWT token">
+      <button class="form__btn" type="submit">Generate NFT</button>
+    </form> 
+  </div>
+  <div class="frame__body" *ngIf="step==1">
+    <div class="processing">
+      <div class="processing__title">NFT generation in process</div>
+      <img class="processing__img" src="assets/loader.gif" alt="loader" width="100" height="100">
+    </div>
+  </div>
+  <div class="frame__body" *ngIf="step==2">
+
+    <div class="success">
+      <div class="success__title">Congratulation!</div>
+      <p class="success__text">Your ref to blockchain explore</p>
+      <p class="success__text" *ngIf="responseInfo">{{responseInfo.rawNFT}}</p>
+    </div>
+  </div>
+</div>
+
+
+
